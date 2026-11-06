@@ -1,0 +1,272 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme='solar'] {
+  --sf-primary: #14243a;
+  --sf-primary-hover: #1c3352;
+  --sf-on-primary: #ffffff;
+  --sf-accent: #16a36a;
+  --sf-accent-soft: #e8f7ef;
+  --sf-accent-ink: #0d7a4d;
+  --sf-canvas: #f7f9fc;
+  --sf-surface: #ffffff;
+  --sf-surface-muted: #f1f4f8;
+  --sf-ink: #182230;
+  --sf-ink-secondary: #667085;
+  --sf-ink-muted: #98a2b3;
+  --sf-line: #e5eaf0;
+  --sf-success: #16a36a;
+  --sf-warning: #e6a23c;
+  --sf-warning-soft: #fff6e8;
+  --sf-warning-ink: #9a6700;
+  --sf-danger: #dc5454;
+  --sf-danger-soft: #fdecec;
+  --sf-danger-ink: #b42318;
+  --sf-info: #4385db;
+  --sf-info-soft: #eaf2fc;
+  --sf-info-ink: #1d4e89;
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --shadow-card: 0 1px 2px rgba(20, 36, 58, 0.04);
+  color: var(--sf-ink);
+  background: var(--sf-canvas);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+[data-theme='harbor'] {
+  --sf-primary: #0e2438;
+  --sf-primary-hover: #16344e;
+  --sf-accent: #0f7a78;
+  --sf-accent-soft: #e5f4f3;
+  --sf-accent-ink: #0b5c5a;
+  --sf-canvas: #f4f7f8;
+  --sf-surface-muted: #e8eef0;
+  --sf-ink: #172430;
+  --sf-ink-secondary: #5e6e78;
+  --sf-ink-muted: #93a1aa;
+  --sf-line: #dce5e8;
+}
+
+[data-theme='dune'] {
+  --sf-primary: #3a3128;
+  --sf-primary-hover: #2c251e;
+  --sf-accent: #b86a2d;
+  --sf-accent-soft: #f8efe4;
+  --sf-accent-ink: #8a4e1c;
+  --sf-canvas: #f8f5f0;
+  --sf-surface: #fffdf9;
+  --sf-surface-muted: #f1ebe3;
+  --sf-ink: #2a241c;
+  --sf-ink-secondary: #6f655c;
+  --sf-ink-muted: #a3988e;
+  --sf-line: #e6ddd2;
+}
+
+[data-theme='slate'] {
+  --sf-primary: #243038;
+  --sf-primary-hover: #1a242b;
+  --sf-accent: #3e7c59;
+  --sf-accent-soft: #e7f2eb;
+  --sf-accent-ink: #24573a;
+  --sf-canvas: #f5f6f7;
+  --sf-surface-muted: #eceeef;
+  --sf-ink: #1c2428;
+  --sf-ink-secondary: #5f6b72;
+  --sf-ink-muted: #94a0a6;
+  --sf-line: #e1e5e8;
+}
+
+[data-theme='indigo'] {
+  --sf-primary: #1c2340;
+  --sf-primary-hover: #151b33;
+  --sf-accent: #4c51c6;
+  --sf-accent-soft: #eeeefb;
+  --sf-accent-ink: #3438a0;
+  --sf-canvas: #f6f7fb;
+  --sf-surface-muted: #eeeff6;
+  --sf-ink: #1a2033;
+  --sf-ink-secondary: #616780;
+  --sf-ink-muted: #969bb0;
+  --sf-line: #e3e5f0;
+}
+
+[data-theme='evergreen'] {
+  --sf-primary: #143028;
+  --sf-primary-hover: #0e241e;
+  --sf-accent: #1f8a5b;
+  --sf-accent-soft: #e6f5ed;
+  --sf-accent-ink: #146b44;
+  --sf-canvas: #f4f7f5;
+  --sf-surface-muted: #e8efec;
+  --sf-ink: #17241e;
+  --sf-ink-secondary: #5c6b63;
+  --sf-ink-muted: #93a29a;
+  --sf-line: #dde6e1;
+}
+
+[data-theme='aurora'] {
+  --sf-primary: #243044;
+  --sf-primary-hover: #1a2534;
+  --sf-accent: #c4a15a;
+  --sf-accent-soft: #f8f1de;
+  --sf-accent-ink: #7a6230;
+  --sf-canvas: #f7f4ec;
+  --sf-surface: #fffdf8;
+  --sf-surface-muted: #f0eadc;
+  --sf-ink: #241f16;
+  --sf-ink-secondary: #6d6456;
+  --sf-ink-muted: #a39886;
+  --sf-line: #e6dfd0;
+}
+
+[data-theme='lagoon'] {
+  --sf-primary: #123044;
+  --sf-primary-hover: #0c2434;
+  --sf-accent: #1287a8;
+  --sf-accent-soft: #e4f4f8;
+  --sf-accent-ink: #0c6278;
+  --sf-canvas: #f3f8fa;
+  --sf-surface-muted: #e6f0f4;
+  --sf-ink: #142832;
+  --sf-ink-secondary: #5a717a;
+  --sf-ink-muted: #90a4ac;
+  --sf-line: #d7e6ec;
+}
+
+[data-theme='midnight'],
+[data-theme='obsidian'],
+[data-theme='dusk'],
+[data-theme='ember'] {
+  color-scheme: dark;
+  --sf-warning: #e6a23c;
+  --sf-warning-soft: #3a2e18;
+  --sf-warning-ink: #f0c27a;
+  --sf-danger: #e07070;
+  --sf-danger-soft: #3a1e22;
+  --sf-danger-ink: #f0a0a0;
+  --sf-info: #7aade8;
+  --sf-info-soft: #1a2c42;
+  --sf-info-ink: #b7d4f6;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme='midnight'] {
+  --sf-primary: #1f8a5b;
+  --sf-primary-hover: #18724b;
+  --sf-on-primary: #ffffff;
+  --sf-accent: #8ee0b5;
+  --sf-accent-soft: #163528;
+  --sf-accent-ink: #b6f0d2;
+  --sf-canvas: #0e141c;
+  --sf-surface: #17202b;
+  --sf-surface-muted: #1e2936;
+  --sf-ink: #e8eef6;
+  --sf-ink-secondary: #a8b3c2;
+  --sf-ink-muted: #7d8b9c;
+  --sf-line: #2a3644;
+}
+
+[data-theme='obsidian'] {
+  --sf-primary: #3ddc97;
+  --sf-primary-hover: #2fc888;
+  --sf-on-primary: #062116;
+  --sf-accent: #9ee7c4;
+  --sf-accent-soft: #173128;
+  --sf-accent-ink: #c8f6e0;
+  --sf-canvas: #121417;
+  --sf-surface: #1b1e23;
+  --sf-surface-muted: #24282e;
+  --sf-ink: #eef1f4;
+  --sf-ink-secondary: #b4bcc6;
+  --sf-ink-muted: #8b949e;
+  --sf-line: #323840;
+}
+
+[data-theme='dusk'] {
+  --sf-primary: #7c83f6;
+  --sf-primary-hover: #6a72ef;
+  --sf-on-primary: #ffffff;
+  --sf-accent: #c4c7ff;
+  --sf-accent-soft: #242848;
+  --sf-accent-ink: #d9dbff;
+  --sf-canvas: #12141f;
+  --sf-surface: #1b1e2e;
+  --sf-surface-muted: #252842;
+  --sf-ink: #eceefe;
+  --sf-ink-secondary: #b7bad4;
+  --sf-ink-muted: #8d91b0;
+  --sf-line: #323652;
+}
+
+[data-theme='ember'] {
+  --sf-primary: #e0a15a;
+  --sf-primary-hover: #d49245;
+  --sf-on-primary: #2a1c10;
+  --sf-accent: #f0c48a;
+  --sf-accent-soft: #3a2a1c;
+  --sf-accent-ink: #f6ddb8;
+  --sf-canvas: #161311;
+  --sf-surface: #221c18;
+  --sf-surface-muted: #2c251f;
+  --sf-ink: #f6efe6;
+  --sf-ink-secondary: #cbbba8;
+  --sf-ink-muted: #9d8d7c;
+  --sf-line: #3d332b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--sf-canvas);
+  color: var(--sf-ink);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sf-primary);
+  outline-offset: 2px;
+}
+
+dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+}
+
+dialog::backdrop {
+  background: rgba(20, 36, 58, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
